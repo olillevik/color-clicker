@@ -1,17 +1,18 @@
 (function () {
     'use strict';
 
-    //model
-    //array of four colours
-    //current colour
+    //modell
+    //liste med farger
+    //nåværende farge
     //timer
-    //points counter
+    //poengteller
 
     var el = function (id) {
         return document.getElementById(id + "");
     };
 
-    var oppdater = function () {
+    //oppdater modell
+    var oppdater = function (timeout) {
         var knappTrykket = this.id;
         console.log("Knapp " + this.id + " trykket");
 
@@ -23,12 +24,17 @@
         vis();
     };
 
+    //oppdater visning
     var vis = function (id) {
-        //render model
+        //tegn nåværende farge
+        //oppdater score
     }
 
+    //inputs
     for (var feltId = 0; feltId <= 5; feltId++) {
         el(feltId).addEventListener("click", oppdater);
     }
+
+    //kall oppdater med timeout
 
 })();
